@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# This pack should be system agnostic
+exit 0

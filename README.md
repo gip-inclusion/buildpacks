@@ -1,3 +1,6 @@
-# Custom buildpacks' catalog
+# Custom buildpack for SigNoz
 
-This repository aims to store PoC or production ready buildpacks mainly targeting Scalingo french PaaS.
+> https://signoz.io/
+
+__This buildpack is a WIP__
+
