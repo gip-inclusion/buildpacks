@@ -9,7 +9,7 @@ wget https://github.com/open-telemetry/opentelemetry-collector-releases/releases
 
 OTELCOL_DIR="$BUILD_DIR/otelcol-contrib"
 
-mkdir "$BUILD_DIR/otelcol-contrib" && tar xvzf otelcol-contrib_0.88.0_linux_amd64.tar.gz -C "$OTELCOL_DIR"
+mkdir "$OTELCOL_DIR" && tar xvzf otelcol-contrib_0.88.0_linux_amd64.tar.gz -C "$OTELCOL_DIR"
 
 cd "$OTELCOL_DIR"
 
