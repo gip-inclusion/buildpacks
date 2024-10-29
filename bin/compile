@@ -95,4 +95,6 @@ pip install opentelemetry-exporter-otlp==1.17.0
 
 opentelemetry-bootstrap --action=install
 
+echo $SIGNOZ_ENDPOINT
+
 ./otelcol-contrib --config ./config.yaml &> otelcol-output.log & echo "$!" > otel-pid
