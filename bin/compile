@@ -4,13 +4,14 @@ BUILD_DIR="$1"
 CACHE_DIR="$2"
 ENV_DIR="$3"
 
-cd "$BUILD_DIR"
 
 wget https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.88.0/otelcol-contrib_0.88.0_linux_amd64.tar.gz
 
-mkdir "$BUILD_DIR/otelcol-contrib" && cd "$BUILD_DIR/otelcol-contrib"
+OTELCOL_DIR="$BUILD_DIR/otelcol-contrib"
 
-tar xvzf otelcol-contrib_0.88.0_linux_amd64.tar.gz && rm otelcol-contrib_0.88.0_linux_amd64.tar.gz
+mkdir "$BUILD_DIR/otelcol-contrib" && tar xvzf otelcol-contrib_0.88.0_linux_amd64.tar.gz -C "$OTELCOL_DIR"
+
+cd "$OTELCOL_DIR"
 
 cat > "config.yaml" <<SH
 receivers:
