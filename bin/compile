@@ -85,7 +85,7 @@ service:
       exporters: [otlp]
 SH
 
-export DJANGO_SETTINGS_MODULE="$APP_NAME.settings"
+export DJANGO_SETTINGS_MODULE="$APPNAME.settings"
 
 python3 -m venv .venv
 source .venv/bin/activate
