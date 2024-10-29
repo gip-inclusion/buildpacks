@@ -8,6 +8,8 @@ cd "$BUILD_DIR"
 
 wget https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v0.88.0/otelcol-contrib_0.88.0_linux_amd64.tar.gz
 
+mkdir "$BUILD_DIR/otelcol-contrib" && cd "$BUILD_DIR/otelcol-contrib"
+
 tar xvzf otelcol-contrib_0.88.0_linux_amd64.tar.gz
 
 cat > "config.yaml" <<SH
@@ -98,7 +100,3 @@ pip install opentelemetry-distro==0.38b0
 pip install opentelemetry-exporter-otlp==1.17.0
 
 opentelemetry-bootstrap --action=install
-
-echo $SIGNOZ_ENDPOINT
-
-./otelcol-contrib --config ./config.yaml &> otelcol-output.log & echo "$!" > otel-pid
